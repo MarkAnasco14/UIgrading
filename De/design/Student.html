@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        .sidebar {
+            background-color: #03153E;
+            color: white;
+            padding: 20px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar .logo {
+            margin-bottom: 20px;
+        }
+        .sidebar .nav-link {
+            color: white;
+            margin: 10px 0;
+        }
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+        .toggle-switch, .profile-icon {
+            color: black;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .btn {
+            background-color: #D3D3D3;
+            color: black;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #007bff; 
+            border-color: #007bff; 
+            color: white;
+        }
+        .transparent-button {
+            background-color: transparent;
+            border: 1px solid #ebeae6; 
+            color: #ecca07; 
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .transparent-button1 {
+            background-color: transparent;
+            border: 1px solid #ccc; 
+            color: #333; 
+            border-radius: 20px;
+        }
+        .transparent-button1:hover {
+            background-color: #228cf0; 
+            color: white;
+        }
+        .transparent-button:hover {
+            background-color: #fa6400; 
+            color: white;
+        }
+        #search {
+            border-radius: 20px;
+        }
+        .profile-info {
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer; /* Add cursor pointer for click indication */
+        }
+        .profile-info h5 {
+            margin: 0;
+        }
+        .profile-info p {
+            margin: 5px 0;
+            color: #ddd;
+        }
+        .sign-out-button {
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: auto; /* Pushes the button to the bottom */
+        }
+        #user-details {
+            display: none; /* Hide details by default */
+            margin-top: 20px;
+            text-align: center;
+        }
+        #user-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="img/Capture.PNG" alt="Benedicto College Logo" class="logo">
+
+        <a href="user-details.html" class="profile-info">
+            <h5>Peter Yares</h5> 
+            <p>Student</p>
+        </a>
+        
+        <a href="#" class="nav-link transparent-button">Subjects</a>
+        
+        <a href="#" class="sign-out-button">Sign Out</a> <!-- Sign Out button -->
+    </div>
+    <div class="content">
+        <div class="header">
+            <!-- Header content if needed -->
+        </div>
+        <h3>Student Dashboard</h3>
+        <div class="form-group col-md-6">
+            <label for="search">Search Subject</label>
+            <div class="input-group">
+                <input type="text" id="search" class="form-control" placeholder="Search..">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="semester">School Year</label>
+                <select id="semester" class="form-control">
+                    <option>SY 2023 - 2024 </option>
+                    <option>SY 2024 - 2025 </option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="semester">Semester</label>
+                <select id="semester" class="form-control">
+                    <option>1st Semester</option>
+                    <option>2nd Semester</option>
+                    <option>summer</option>
+                </select>
+            </div>
+           
+            
+        </div>
+        <button type="button" class="btn btn-primary">View grades</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
